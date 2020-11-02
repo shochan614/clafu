@@ -1,24 +1,58 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Schoolsテーブル 
 
-Things you may want to cover:
+| Column | Type   | Options                   |
+| ------ | ------ | ------------------------- |
+| name   | string | null: false, unique: true |
 
-* Ruby version
+### Association
 
-* System dependencies
+has_many :class_rooms  
 
-* Configuration
 
-* Database creation
+## Class_roomsテーブル
 
-* Database initialization
+| Column         | Type       | Options                        |
+| -------------- | ---------- | ------------------------------ |
+| school         | references | null: false, foreign_kye: true |
+| grate          | integer    | null: false                    |
+| class_number   | integer    | null: false                    |
+| class_goals    | storing    |                                |
 
-* How to run the test suite
+### Association
 
-* Services (job queues, cache servers, search engines, etc.)
+belongs_to :school  
+has_many :users  
+has_many :messages  
 
-* Deployment instructions
 
-* ...
+## Usersテーブル
+
+| Column            | Type       | Options                        |
+| ----------------- | ---------- | ------------------------------ |
+| first_name        | string     | null: false                    |
+| last_name         | string     | null: false                    |
+| nickname          | string     | null: false                    |
+| attendance_number | integer    | null: false                    |
+| email             | string     | null: false, unique: true      |
+| password          | string     | null: false                    |
+| class_room        | references | null: false, foreign_kye: true |
+
+### Association
+
+belongs_to :class_room  
+has_many :messages  
+
+
+## Messagesテーブル
+
+| Column         | Type       | Options                        |
+| -------------- | ---------- | ------------------------------ |
+| content        | string     |                                |
+| user           | references | null: false, foreign_kye: true |
+| class_room     | references | null: false, foreign_kye: true |
+
+### Association
+belongs_to :class_room  
+belongs_to :user  
