@@ -1,0 +1,5 @@
+<%= form_with model: @school, local: true do |f| %>
+  <%= f.text_area :name, class:"school-name", id:"school-name", placeholder:"学校名", maxlength:"40" %>
+  <%= f.submit "登録する" ,class:"reg-btn" %>
+<% end %>
+<%= link_to 'もどる', root_path, class:"back-btn" %>
