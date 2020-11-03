@@ -1,7 +1,9 @@
 class ClassRoom < ApplicationRecord
-  validates :school, presence: true
-  validates :school, presence: true
-  validates :school, presence: true
+  with_options presence: true do
+    validates :school_id 
+    validates :grade
+    validates :class_number
+  end
 
   belongs_to :school
 end
