@@ -11,7 +11,7 @@ RSpec.describe School, type: :model do
     it '学校名が空白だと、登録できないこと' do
       @school.name = nil
       @school.valid?
-      expect(@school.errors.full_messages).to include("Name can't be blank")
+      expect(@school.errors.full_messages).to include("学校名を入力してください")
     end
   end
 end
