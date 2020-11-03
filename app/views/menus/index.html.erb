@@ -1,2 +1,10 @@
-<h1>Menus#index</h1>
-<p>Find me in app/views/menus/index.html.erb</p>
+<%= render "shared/header" %>
+
+  <main>
+    <div class="registration">
+      <%= link_to '学校登録' , root_path, class: :reg_school %>
+      <%= link_to 'クラス登録' , root_path, class: :reg_classroom %>
+    </div>
+  </main>
+
+<%= render "shared/footer" %>
