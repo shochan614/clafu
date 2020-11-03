@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_11_03_034811) do
 
   create_table "class_rooms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "school_id", null: false
-    t.integer "grate", null: false
+    t.integer "grade", null: false
     t.integer "class_number", null: false
     t.string "class_goals"
     t.datetime "created_at", precision: 6, null: false

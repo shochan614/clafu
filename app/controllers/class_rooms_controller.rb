@@ -15,6 +15,6 @@ class ClassRoomsController < ApplicationController
 
   private
     def class_room_params
-      params.require(:class_room).permit(:school_id, :grate, :class_number, :class_goals) 
+      params.require(:class_room).permit(:school_id, :grade, :class_number, :class_goals) 
     end
 end

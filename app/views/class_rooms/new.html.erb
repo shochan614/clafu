@@ -1,10 +1,10 @@
 <%= form_with model: @class_room, local: true do |f| %>
+<%= render "shared/header" %>
 <%= render 'shared/error_messages', model: f.object %>
-
   <%= f.collection_select(:school_id, @schools, :id, :name, {prompt: "学校を選択してください"}, {class: "school-name", id: "school-name"}) %>
-  <%= f.number_field :grate, class:"grate", id:"grate", placeholder:"学年" , min: 1, max: 7 %>
+  <%= f.number_field :grade, class:"grade", id:"grade", placeholder:"学年" , min: 1, max: 7 %>
   <%= f.number_field :class_number, class:"class_number", id:"class_number", placeholder:"組", min: 1, max: 10 %>
   <%= f.text_field :class_goals, class:"class-goals", id:"class-goals", placeholder:"学級目標", maxlength:"40" %>
-  <%= f.submit "登録する" ,class:"reg-btn" %>
+  <%= f.submit "登録する", class:"reg-btn" %>
 <% end %>
 <%= link_to 'もどる', root_path, class:"back-btn" %>
