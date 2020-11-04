@@ -1,14 +1,14 @@
 <header>
-  <div class="left_header">
-    <div class="app_name">Clafu</div>
+  <div class="left-header">
+    <div class="app-name">Clafu</div>
   </div>
-  <div class="right_header">
+  <div class="right-header">
     <% if user_signed_in? %>
-      <%= link_to current_user.nickname, root_path, class: :user_nickname %>
+      <%= link_to current_user.nickname, root_path, class: :"user-nickname" %>
       <%= link_to 'ログアウト', destroy_user_session_path, method: :delete ,class: :logout %>
     <% else %>
       <%= link_to 'ログイン', new_user_session_path, class: :login %>
-      <%= link_to '新しく登録', new_user_registration_path, class: :sign_up %>
+      <%= link_to '新しく登録', new_user_registration_path, class: :"sign-up" %>
     <% end %>
   </div>
 </header>
