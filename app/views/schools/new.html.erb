@@ -1,3 +1,4 @@
+<%= render "shared/header" %>
 <%= form_with model: @school, local: true do |f| %>
 <%= render 'shared/error_messages', model: f.object %>
   <%= f.text_area :name, class:"school-name", id:"school-name", placeholder:"学校名", maxlength:"40" %>
