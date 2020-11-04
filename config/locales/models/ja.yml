@@ -2,6 +2,12 @@ ja:
   activerecord:
     models:
       school: 学校
+      class_room: 学級
     attributes:
       school:
         name: 学校名
+      class_room:
+        school_id: 学校名
+        grade: 学年
+        class_number: 組
+        class_goals: 学級目標

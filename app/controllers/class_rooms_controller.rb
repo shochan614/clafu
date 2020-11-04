@@ -9,6 +9,7 @@ class ClassRoomsController < ApplicationController
     if @class_room.save
       redirect_to root_path
     else
+      @schools = School.all
       render :new
     end
   end
