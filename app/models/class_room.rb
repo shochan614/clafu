@@ -6,4 +6,5 @@ class ClassRoom < ApplicationRecord
   end
 
   belongs_to :school
+  has_many :users
 end
