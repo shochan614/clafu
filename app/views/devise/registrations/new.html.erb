@@ -1,6 +1,6 @@
 <%= render "shared/second_header" %>
   <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
-  
+  <%= render 'devise/shared/error_messages', model: f.object %>
     <div class="form-group">
       <%= f.number_field :class_room_id, class:"class-room-id", id:"class-room-id", placeholder:"クラスID" , min: 1 %>
     </div>
