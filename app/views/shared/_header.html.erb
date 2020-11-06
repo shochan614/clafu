@@ -1,10 +1,10 @@
 <header>
   <div class="left-header">
-    <div class="app-name">Clafu</div>
+    <%= link_to 'Clafu', root_path, class: :"app-name" %>
   </div>
   <div class="right-header">
     <% if user_signed_in? %>
-      <%= link_to current_user.nickname, root_path, class: :"user-nickname" %>
+      <%= link_to current_user.nickname + "さん", root_path, class: :"user-nickname" %>
       <%= link_to 'ログアウト', destroy_user_session_path, class: :logout %>
     <% else %>
       <%= link_to 'ログイン', new_user_session_path, class: :login %>
