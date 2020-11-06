@@ -9,7 +9,7 @@
         <div class="main-menus">
           <ul class="menu-lists">
             <li class="menu-list">
-              <%= link_to 'チャットルーム', '#' %>
+              <%= link_to 'チャットルーム', class_room_messages_path(current_user.class_room.id) %>
             </li>
             <li class="menu-list">
               <%= link_to '宿題チェック', '#' %>
