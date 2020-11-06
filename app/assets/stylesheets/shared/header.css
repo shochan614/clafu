@@ -1,0 +1,67 @@
+* {
+  text-decoration: none;
+}
+
+header {
+  width: 100vw;
+  height: 100px;
+  background: linear-gradient(to right, #2af598 0%, #009efd 100%);
+  /* z-index: 10; */
+  display: flex;
+  justify-content: space-between;
+  /* background-color: blueviolet; */
+  border-bottom: double 5px #5490cc;
+  position:fixed;
+}
+.left-header {
+  background-color: brown;
+}
+.app-name {
+  font-size: 80px;
+  font-family: 'Hi Melody';
+}
+.right-header {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.user-nickname {
+  border: black 1px solid;
+  margin-bottom: 10px;
+}
+.logout {
+  color: #fff;
+  background-color: #eb6100;
+  border-bottom: 5px solid #b84c00;
+  text-align: center;
+}
+.logout:hover {
+  margin-top: 3px;
+  color: #fff;
+  background: #f56500;
+  border-bottom: 2px solid #b84c00;
+}
+.login {
+  color: #fff;
+  background-color: #eb6100;
+  border-bottom: 5px solid #b84c00;
+  text-align: center;
+}
+.login:hover {
+  margin-top: 3px;
+  color: #fff;
+  background: #f56500;
+  border-bottom: 2px solid #b84c00;
+}
+.sign-up {
+  color: #fff;
+  background-color: #eb6100;
+  border-bottom: 5px solid #b84c00;
+  text-align: center;
+}
+.sign-up:hover {
+  margin-top: 3px;
+  color: #fff;
+  background: #f56500;
+  border-bottom: 2px solid #b84c00;
+}

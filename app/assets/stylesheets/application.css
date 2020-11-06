@@ -16,3 +16,9 @@
  * {
   box-sizing: border-box;
 }
+.app-name {
+  font-family: 'Hi Melody';
+}
+main {
+  padding-top: 100px;
+}
