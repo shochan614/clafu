@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :menus, only: :index
   resources :schools, only: [:new, :create]
   resources :class_rooms, only: [:new, :create]
+  
 end
