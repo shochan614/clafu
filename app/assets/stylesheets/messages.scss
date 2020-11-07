@@ -12,3 +12,20 @@
 .content {
   width: calc(100vw - 50px);
 }
+.message {
+  margin: 10px;
+  width: 40vw;
+}
+.upper-message {
+  display: flex;
+}
+.message-user {
+  margin-right: 20px;
+}
+.message-date {
+  font-size: 12px;
+}
+.message-content {
+  border: steelblue 2px solid;
+  overflow-wrap: break-word;
+}
