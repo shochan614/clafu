@@ -1,3 +1,10 @@
-// Place all the styles related to the messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.message-display {
+  height: calc(100vh - 200px);
+  padding: 10px 10px;
+  background-color: rosybrown;
+  overflow: scroll;
+}
+.message-send {
+  height: 100px;
+  background-color: skyblue;
+}
