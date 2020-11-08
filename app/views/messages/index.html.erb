@@ -6,7 +6,7 @@
   </div>
   <div class="message-box">
     <%= form_with model: [@class_room, @message], local: true do |f| %>
-      <%= f.text_field :content, class:"content", placeholder:"メッセージ", min:1, max: 300 %>
+      <%= f.text_field :content, class:"content", placeholder:"メッセージ(300文字まで)", min:1, max: 300 %>
       <%= f.submit "送信する", class:"message-send" %>
     <% end %>
   </div>
