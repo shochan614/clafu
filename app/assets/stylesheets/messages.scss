@@ -1,0 +1,41 @@
+.message-display {
+  height: calc(100vh - 250px);
+  padding: 10px 10px;
+  background-color: rosybrown;
+  overflow: scroll;
+}
+.message-box {
+  height: 150px;
+  background-color: skyblue;
+  padding: 10px;
+}
+.content {
+  height: 50px;
+  width: calc(100vw - 50px);
+}
+.message {
+  margin: 10px;
+  width: 40vw;
+}
+.upper-message {
+  display: flex;
+}
+.message-user {
+  margin-right: 20px;
+}
+.message-date {
+  font-size: 12px;
+}
+.message-content {
+  border: steelblue 2px solid;
+  overflow-wrap: break-word;
+}
+
+.message-send {
+  float: right;
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  background-color: lightblue;
+  margin: 15px;
+}

@@ -3,8 +3,11 @@ Rails.application.routes.draw do
     sessions:      'users/sessions',
     registrations: 'users/registrations'
   }
-  root to: "menus#index"
-  resources :menus, only: :index
+  root to: "class_rooms#index"
   resources :schools, only: [:new, :create]
-  resources :class_rooms, only: [:new, :create]
+  resources :class_rooms, only: [:index, :new, :create] do
+  # resources :menus, only: :index do
+    resources :messages, only: [:index, :create]
+  end
+
 end

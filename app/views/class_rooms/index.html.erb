@@ -1,0 +1,31 @@
+<%= render "shared/header" %>
+
+  <main>
+      <div class="registration">
+        <%= link_to '学校登録' , new_school_path, class: :"reg-school" %>
+        <%= link_to 'クラス登録' , new_class_room_path, class: :"reg-classroom" %>
+      </div>
+      <%if user_signed_in? %>
+        <div class="main-menus">
+          <ul class="menu-lists">
+            <li class="menu-list">
+              <%= link_to 'チャットルーム', class_room_messages_path(current_user.class_room.id) %>
+            </li>
+            <li class="menu-list">
+              <%= link_to '宿題チェック', '#' %>
+            </li>
+            <li class="menu-list">
+              <%= link_to 'カレンダー', '#' %>
+            </li>
+            <li class="menu-list">
+              <%= link_to 'フォ便り', '#' %>
+            </li>
+            <li class="menu-list">
+              <%= link_to 'マイページ', '#' %>
+            </li>
+          </ul>
+        </div>
+      <% end %>
+  </main>
+
+<%= render "shared/footer" %>

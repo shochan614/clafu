@@ -1,4 +1,7 @@
 class ClassRoomsController < ApplicationController
+  def index
+  end
+  
   def new
     @schools = School.all
     @class_room = ClassRoom.new
