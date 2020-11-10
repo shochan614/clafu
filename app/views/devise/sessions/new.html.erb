@@ -1,7 +1,9 @@
-<%= render "shared/second_header" %>
+<%#= render "shared/second_header" %>
   <main>
     <%= form_with model: @user, url: user_session_path, class: 'sessions-main', local: true do |f| %>
-    <%= render 'devise/shared/error_messages', model: f.object %>
+      <div class="error-message">
+        <p class="alert"><%= alert %></p>
+      </div>
       <div class="form-group">
         <label class="form-text">ニックネーム</label>
         <%= f.text_field :nickname, class:"nickname", id:"nickname", placeholder:"ニックネーム" %>

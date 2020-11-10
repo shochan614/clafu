@@ -1,32 +1,10 @@
+.sessions-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .form-group {
-  margin: 0 auto;
+  padding-top: 20px;
 }
 
-
-.reg-btn {
-  width: 180px;
-  height:50px;
-  text-align: center;
-  background-color: #9ec34b;
-  font-size: 16px;
-  line-height: 52px;
-  color: #FFF;
-  font-weight: bold;
-  border: 2px solid #9ec34b;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-.reg-btn:after {
-  width: 100%;
-  height: 0;
-  content:"";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background : #FFF;
-  opacity: 0;
-  transform: translateX(-50%) translateY(-50%) rotate(45deg);
-  transition: .2s;
-  z-index: -1;
-}

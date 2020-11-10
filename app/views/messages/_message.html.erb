@@ -11,5 +11,17 @@
     <div class="message-content">
       <%= message.content %>
     </div>
+    <div>
+      <% if message.user.id == current_user.id %>
+        <div class="edit-delete">
+          <div class="edit">
+            <%= link_to 'へんしゅう', "#", class: :edit %>
+          </div>
+          <div class="delete">
+            <%= link_to 'さくじょ', "#", class: :delete %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

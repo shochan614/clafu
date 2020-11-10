@@ -1,3 +1,33 @@
-// Place all the styles related to the class_rooms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.class-room-reg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.class-g-n {
+  display: flex;
+}
+.grade, .class-number {
+  width: 90px;
+}
+
+.grade {
+  margin-right: 20px;
+}
+.class-goals {
+  margin: 20px 0;
+}
+
+.menu-lists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.menu-list {
+  margin: 30px auto;
+  border: black 3px solid;
+  padding: 30px;
+}

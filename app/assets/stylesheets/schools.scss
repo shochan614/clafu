@@ -1,3 +1,12 @@
+.school-reg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
 .school-name {
-  
+  height: 50px;
+  font-size: 40px;
+  margin: 120px 0 20px 0;
 }
