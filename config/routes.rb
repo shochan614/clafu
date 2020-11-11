@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :schools, only: [:new, :create]
   resources :class_rooms, only: [:index, :new, :create] do
   # resources :menus, only: :index do
-    resources :messages, only: [:index, :create]
+    resources :messages, only: [:index, :create, :destroy]
   end
 
 end
