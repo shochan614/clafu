@@ -14,7 +14,7 @@
     <div>
       <% if message.user.id == current_user.id %>
         <div class="delete">
-          <%= link_to 'さくじょ', "#", class: :delete %>
+          <%= button_to 'さくじょ', class_room_message_path(@class_room, message), method: :delete, class: "delete" %>
         </div>
       <% end %>
     </div>
