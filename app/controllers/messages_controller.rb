@@ -30,7 +30,7 @@ class MessagesController < ApplicationController
 
 private
   def massage_params
-    params.require(:message).permit(:content).merge(user_id: current_user.id, class_room_id: params[:class_room_id])
+    params.require(:message).permit(:content, :image).merge(user_id: current_user.id, class_room_id: params[:class_room_id])
   end
   # def reject
   #   @class_room = ClassRoom.find(params[:class_room_id])
