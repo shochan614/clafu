@@ -28,10 +28,17 @@
   padding-top: 20px;
 }
 .message-content {
+  display: flex;
+  flex-direction: column;
   background-color: #e1f1e7;
   border: steelblue 2px solid;
   overflow-wrap: break-word;
   border-radius: 20px;
+}
+.message-image {
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
 }
 
 .message-send {
