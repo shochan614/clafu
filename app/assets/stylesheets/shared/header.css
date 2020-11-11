@@ -12,9 +12,7 @@ header {
   border-bottom: double 5px #5490cc;
   position:fixed;
 }
-.left-header {
-  /* background-color: brown; */
-}
+
 .app-name {
   font-size: 90px;
   font-family: 'Hi Melody';
