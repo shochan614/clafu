@@ -28,12 +28,24 @@
   padding-top: 20px;
 }
 .message-content {
+  display: flex;
+  flex-direction: column;
   background-color: #e1f1e7;
   border: steelblue 2px solid;
   overflow-wrap: break-word;
   border-radius: 20px;
 }
-
+.message-image {
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+}
+.image {
+  display: inline;
+}
+.image:hover {
+  cursor: pointer;
+}
 .message-send {
   float: right;
   width: 100px;
@@ -49,4 +61,14 @@
   margin-left: 7px;
   text-decoration: black;
   margin-top: 3px;
+}
+
+.form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
 }

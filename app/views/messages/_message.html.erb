@@ -9,7 +9,12 @@
   </div>
   <div class="lower-message">
     <div class="message-content">
-      <%= message.content %>
+      <% if message.image.attached? %>
+        <%= image_tag message.image.variant(resize: '500x500'), class: "message-image" %>
+      <% end %>
+      <div class="message-text">
+        <%= message.content %>
+      </div>
     </div>
     <div>
       <% if message.user.id == current_user.id %>
