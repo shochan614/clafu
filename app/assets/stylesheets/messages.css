@@ -40,7 +40,12 @@
   height: 100%;
   width: 100%;
 }
-
+.image {
+  display: inline;
+}
+.image:hover {
+  cursor: pointer;
+}
 .message-send {
   float: right;
   width: 100px;
