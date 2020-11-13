@@ -8,7 +8,7 @@
     <%= form_with model: [@class_room, @message], local: true do |f| %>
       <%= f.text_field :content, class:"content", placeholder:"メッセージ(300文字まで)", min:1, max: 300 %>
       <div class="image">
-        <%= f.label :写真, class:"fas fa-image" %>
+        <%= f.label :image, class:"fas fa-image" %>
         <%= f.file_field :image, style: "display: none;"%>
       </div>
       <%= f.submit "送信する", class:"message-send" %>
