@@ -2,10 +2,10 @@
 <main>
   <div class="class-room-info">
     <p><%= @class_room.grade %>年<%= @class_room.class_number %>組</p>
-    <% if @class_room.class_goals.nil? %>
-      <p>学級目標は『<%= @class_room.class_goals %>』です。</p>
-    <% else %>
+    <% if @class_room.class_goals.empty? %>
       <p>学級目標は登録されていません。</P>
+    <% else %>
+      <p>学級目標は『<%= @class_room.class_goals %>』です。</p>
     <% end %>
     <p>クラスIDは<%= @class_room.id %>です。</p>
   </div>
