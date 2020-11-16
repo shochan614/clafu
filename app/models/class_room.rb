@@ -1,11 +1,11 @@
 class ClassRoom < ApplicationRecord
-  with_options presence: true do
-    validates :school_id 
-    validates :grade, format: { with: /\A[0-9]+\z/ }, inclusion: { in: 1..7 }
-    validates :class_number, format: { with: /\A[0-9]+\z/ }, inclusion: { in: 1..10 }
-  end
-
   belongs_to :school
   has_many :users
   has_many :messages
+
+  with_options presence: true do
+    validates :grade, format: { with: /\A[0-9]+\z/, allow_blank: true}, inclusion: { in: 1..7, allow_blank: true }
+    validates :class_number, format: { with: /\A[0-9]+\z/, allow_blank: true }, inclusion: { in: 1..10, allow_blank: true }
+  end
+
 end

@@ -7,12 +7,12 @@ ja:
       school:
         name: 学校名
       class_room:
-        school_id: 学校名
+        school: 学校名
         grade: 学年
         class_number: 組
         class_goals: 学級目標
       user:
-        class_room_id: クラスID
+        class_room: クラスID
         nickname: ニックネーム
         first_name: 上の名前
         last_name: 下の名前
