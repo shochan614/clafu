@@ -17,4 +17,10 @@ class User < ApplicationRecord
     validates :attendance_number
   end
 
+  def self.guest
+    find_or_create_by!(email: 'guest@example.com', nickname: 'ゲスト',class_room_id: 1, first_name: 'ゲスト', last_name: 'ゲスト', attendance_number: 1) do |user|
+      user.password = SecureRandom.urlsafe_base64
+    end
+  end
+
 end
