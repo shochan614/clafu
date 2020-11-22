@@ -9,7 +9,7 @@
     <% else %>
       <%= link_to 'ログイン', new_user_session_path, class: :login %>
       <%= link_to '新しく登録', new_user_registration_path, class: :"sign-up" %>
-      <%= button_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post %>
+      <%= button_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post %> <%#ゲストログインボタン%>
     <% end %>
   </div>
 </header>
