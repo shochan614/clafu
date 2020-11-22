@@ -3,6 +3,9 @@ Rails.application.routes.draw do
     sessions:      'users/sessions',
     registrations: 'users/registrations'
   }
+  devise_scope :user do
+    post 'users/guest_sign_in', to: 'users/sessions#new_guest'
+  end
   root to: "class_rooms#index"
   resources :schools, only: [:new, :create]
   resources :class_rooms, only: [:index, :new, :create, :show] do
