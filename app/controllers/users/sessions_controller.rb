@@ -18,6 +18,12 @@ class Users::SessionsController < Devise::SessionsController
   #   super
   # end
 
+  def new_guest #ゲストログイン用アクション
+    user = User.guest #ゲストユーザーをモデルから呼び出す
+    sign_in user #ゲストユーザーでサインイン
+    redirect_to root_path
+  end
+
   protected
 
   # If you have extra params to permit, append them to the sanitizer.

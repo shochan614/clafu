@@ -14,8 +14,10 @@ RSpec.describe School, type: :model do
       expect(@school.errors.full_messages).to include("学校名を入力してください")
     end
     it '同じ学校名は登録できないこと' do
+      @school.name = '横浜小学校'
       another_school = FactoryBot.build(:school)
-      another_school.name = @school.name
+      another_school.name = '横浜小学校'
+      # binding.pry
       another_school.valid?
       expect(another_school.errors.full_messages).to include("学校名はすでに存在します")
     end
