@@ -1,2 +1,5 @@
 <%= post.title %>
 <%= post.text %>
+<% if post.image.attached? %>
+  <%= image_tag post.image.variant(resize: '100x100'), class: "post-image" %>
+<% end %>
