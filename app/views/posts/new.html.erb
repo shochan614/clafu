@@ -1,4 +1,9 @@
 <%= render "shared/header" %>
   <main>
+    <%= form_with model: [@class_room, @post], local: true do |f| %>
+      <%= f.text_field :title, class:"title", placeholder:"タイトル", min:1, max: 50 %>
+      <%= f.text_field :text, class:"text", placeholder:"テキスト", min:1, max: 1000 %>
+      <%= f.submit "送信する", class:"text-send" %>
+    <% end %>
   </main>
 <%= render "shared/second_footer" %>
