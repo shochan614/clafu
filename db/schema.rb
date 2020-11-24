@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_11_092555) do
+ActiveRecord::Schema.define(version: 2020_11_24_064411) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -53,6 +53,15 @@ ActiveRecord::Schema.define(version: 2020_11_11_092555) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
+  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "text", null: false
+    t.bigint "class_room_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["class_room_id"], name: "index_posts_on_class_room_id"
+  end
+
   create_table "schools", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -82,5 +91,6 @@ ActiveRecord::Schema.define(version: 2020_11_11_092555) do
   add_foreign_key "class_rooms", "schools"
   add_foreign_key "messages", "class_rooms"
   add_foreign_key "messages", "users"
+  add_foreign_key "posts", "class_rooms"
   add_foreign_key "users", "class_rooms"
 end
