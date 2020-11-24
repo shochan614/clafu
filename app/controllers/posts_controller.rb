@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   def index
+    @class_room = ClassRoom.find(params[:class_room_id])
+    @posts = @class_room.posts.order("created_at DESC")
   end
   def new
     @class_room = ClassRoom.find(params[:class_room_id])
