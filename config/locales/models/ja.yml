@@ -17,3 +17,6 @@ ja:
         first_name: 上の名前
         last_name: 下の名前
         attendance_number: 出席番号
+      post:
+        title: タイトル
+        text: テキスト
