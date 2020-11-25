@@ -20,7 +20,7 @@ class User < ApplicationRecord
   def self.guest #ゲストユーザー用のアカウント作成
     find_or_create_by!(email: 'guest@example.com',
                        nickname: 'ゲスト',
-                       class_room_id: 100, #seedで初期データ作成
+                       class_room_id: 1, #seedで初期データ作成
                        first_name: 'ゲスト',
                        last_name: 'ゲスト',
                        attendance_number: 1) do |user|
