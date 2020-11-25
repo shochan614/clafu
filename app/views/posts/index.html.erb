@@ -1,8 +1,9 @@
 <%= render "shared/header" %>
   <main>
-    <%= link_to '投稿する', new_class_room_post_path(current_user.class_room.id) %>
+    <div class="post-btn">
+      <%= link_to '投稿する', new_class_room_post_path(current_user.class_room.id) %>
+    </div>
     <div class="post-display">
       <%= render partial: 'post', collection: @posts %>
     </div>
   </main>
-<%= render "shared/second_footer" %>

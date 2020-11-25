@@ -12,7 +12,7 @@
             <%= image_tag message.image.variant(resize: '500x500'), class: "message-image" %>
           <% end %>
           <div class="my-message-text">
-            <%= message.content %>
+            <%= simple_format(message.content) %>
           </div>
         </div>
         <div>
@@ -40,7 +40,7 @@
             <%= image_tag message.image.variant(resize: '500x500'), class: "message-image" %>
           <% end %>
           <div class="message-text">
-            <%= message.content %>
+            <%= simple_format(message.content) %>
           </div>
         </div>
       </div>

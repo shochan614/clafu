@@ -1,5 +1,16 @@
-<%= post.title %>
-<%= post.text %>
-<% if post.image.attached? %>
-  <%= image_tag post.image.variant(resize: '100x100'), class: "post-image" %>
-<% end %>
+<div class="posts">
+  <div class="post-title">
+    <%= post.title %>
+  </div>
+  <div class="post-time">
+    <%= l post.created_at, format: :post %>
+  </div>
+  <div class="post-image">
+    <% if post.image.attached? %>
+      <%= image_tag post.image.variant(resize: '1000x1000'), class: "post-image" %>
+    <% end %>
+  </div>
+  <div class="post-text">
+    <%= simple_format(post.text) %>
+  </div>
+</div>
