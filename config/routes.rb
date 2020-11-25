@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'posts/index'
   devise_for :users, controllers: {
     sessions:      'users/sessions',
     registrations: 'users/registrations'
@@ -9,8 +10,8 @@ Rails.application.routes.draw do
   root to: "class_rooms#index"
   resources :schools, only: [:new, :create]
   resources :class_rooms, only: [:index, :new, :create, :show] do
-  # resources :menus, only: :index do
     resources :messages, only: [:index, :create, :destroy]
+    resources :posts
   end
 
 end
