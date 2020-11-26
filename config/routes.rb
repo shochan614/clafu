@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/show'
   devise_for :users, controllers: {
     sessions:      'users/sessions',
     registrations: 'users/registrations'
@@ -12,6 +11,7 @@ Rails.application.routes.draw do
   resources :class_rooms, only: [:index, :new, :create, :show] do
     resources :messages, only: [:index, :create, :destroy]
     resources :posts, only: [:index, :new, :create]
+    resources :users, only: [:show, :edit, :update]
   end
 
 end
