@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'posts/index'
+  get 'users/show'
   devise_for :users, controllers: {
     sessions:      'users/sessions',
     registrations: 'users/registrations'
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :schools, only: [:new, :create]
   resources :class_rooms, only: [:index, :new, :create, :show] do
     resources :messages, only: [:index, :create, :destroy]
-    resources :posts
+    resources :posts, only: [:index, :new, :create]
   end
 
 end
