@@ -1,13 +1,22 @@
 <%= render "shared/header" %>
 <main>
+<%= Time.new %>
   <div>
+    <p>上の名前</p>
+    <%= @user.first_name %>
+  </div>
+  <div>
+    <p>下の名前</p>
+    <%= @user.last_name %>
+  </div>
+  <div>
+    <p>ニックネーム</p>
     <%= @user.nickname %>
   </div>
   <div>
-    <%= @user.id %>
+    <p>メールアドレス</p>
+    <%= @user.email %>
   </div>
-  <div>
-  </div>
-  <%= link_to 'へんしゅうする', edit_user_registration_path %>
+  <%= link_to 'へんしゅうする', edit_user_registration_path, class:"edit-btn" %>
   <%= link_to 'もどる', :back, class:"back-btn" %>
 </main>
