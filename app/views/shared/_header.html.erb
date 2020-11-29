@@ -3,8 +3,9 @@
     <%= link_to 'Clafu', root_path, class: :"app-name" %>
   </div>
   <div class="right-header">
+    <%= Date.today.strftime("%Y/%m/%d") %>
     <% if user_signed_in? %>
-      <%= link_to current_user.nickname + "さん", root_path, class: :"user-nickname" %>
+      <%= link_to current_user.nickname + "さん", class_room_user_path(current_user.class_room.id, current_user.id), class: :"user-nickname" %>
       <%= link_to 'ログアウト', destroy_user_session_path, class: :logout %>
     <% else %>
       <%= link_to 'ログイン', new_user_session_path, class: :login %>
