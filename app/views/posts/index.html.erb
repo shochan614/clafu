@@ -1,5 +1,6 @@
 <%= render "shared/header" %>
   <main>
+    <p><%= flash[:success] %></p>
     <div class="post-btn">
       <%= link_to '投稿する', new_class_room_post_path(current_user.class_room.id) %>
     </div>
