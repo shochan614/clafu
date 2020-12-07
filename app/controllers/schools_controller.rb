@@ -6,6 +6,7 @@ class SchoolsController < ApplicationController
   def create
     @school = School.new(school_params)
     if @school.save
+      flash[:success] = '新しく学校が登録されました'
       redirect_to root_path
     else
       render :new

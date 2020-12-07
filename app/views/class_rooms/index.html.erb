@@ -1,6 +1,7 @@
 <%= render "shared/header" %>
 
   <main>
+    <p><%= flash[:success] %></p>
       <%if user_signed_in? %>
         <div class="main-menus">
           <ul class="menu-lists">
