@@ -65,3 +65,7 @@ header {
   background: #f56500;
   border-bottom: 2px solid #b84c00;
 }
+.time {
+  margin-top: auto;
+  margin-right: 5px;
+}
