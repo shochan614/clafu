@@ -4,6 +4,7 @@
       <div class="my-upper-message">
         <div class="message-date">
           <%= l message.created_at %>
+          <%= time_ago_in_words(message.created_at) %>前
         </div>
       </div>
       <div class="lower-message">
@@ -32,6 +33,7 @@
         </div>
         <div class="message-date">
           <%= l message.created_at %>
+          <%= time_ago_in_words(message.created_at) %>前
         </div>
       </div>
       <div class="lower-message">

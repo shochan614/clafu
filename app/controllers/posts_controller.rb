@@ -13,6 +13,7 @@ class PostsController < ApplicationController
     @class_room = ClassRoom.find(params[:class_room_id])
     @post = Post.new(post_params)
     if @post.save
+      flash[:success] = '送信されました'
       redirect_to class_room_posts_path(current_user.class_room.id)
     else
       render :new
