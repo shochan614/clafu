@@ -1,16 +1,15 @@
 class PostsController < ApplicationController
+  before_action :set_class_room_id, only: [:index, :new, :create, ]
+
   def index
-    @class_room = ClassRoom.find(params[:class_room_id])
     @posts = @class_room.posts.order("created_at DESC")
   end
 
   def new
-    @class_room = ClassRoom.find(params[:class_room_id])
     @post = Post.new
   end
 
   def create
-    @class_room = ClassRoom.find(params[:class_room_id])
     @post = Post.new(post_params)
     if @post.save
       flash[:success] = '送信されました'
@@ -23,5 +22,9 @@ class PostsController < ApplicationController
 private
   def post_params
     params.require(:post).permit(:title, :text, :image).merge(class_room_id: params[:class_room_id])
+  end
+
+  def set_class_room_id
+    @class_room = ClassRoom.find(params[:class_room_id])
   end
 end
