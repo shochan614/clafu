@@ -19,7 +19,7 @@ class PostsController < ApplicationController
     end
   end
 
-private
+  private
   def post_params
     params.require(:post).permit(:title, :text, :image).merge(class_room_id: params[:class_room_id])
   end
