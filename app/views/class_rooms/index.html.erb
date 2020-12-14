@@ -1,6 +1,7 @@
 <%= render "shared/header" %>
 
   <main>
+    <%#ログインユーザー画面%>
     <p><%= flash[:success] %></p>
       <%if user_signed_in? %>
         <div class="main-menus">
@@ -24,6 +25,12 @@
           </ul>
         </div>
       <% end %>
+    <%#ログアウトユーザー画面%>
+    <% unless user_signed_in? %>
+      <div class="registration">
+        <%= link_to '学校登録' , new_school_path, class: :"reg-school" %>
+        <%= link_to 'クラス登録' , new_class_room_path, class: :"reg-classroom" %>
+      </div>
+    <% end %>
   </main>
-
 <%= render "shared/footer" %>
