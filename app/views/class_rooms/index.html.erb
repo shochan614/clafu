@@ -27,9 +27,15 @@
       <% end %>
     <%#ログアウトユーザー画面%>
     <% unless user_signed_in? %>
-      <div class="registration">
-        <%= link_to '学校登録' , new_school_path, class: :"reg-school" %>
-        <%= link_to 'クラス登録' , new_class_room_path, class: :"reg-classroom" %>
+      <div class="main-menus">
+        <ul class="menu-lists">
+          <li class="menu-list">
+            <%= link_to '学校登録' , new_school_path, class: :"reg-school" %>
+          </li>
+          <li class="menu-list">
+            <%= link_to 'クラス登録' , new_class_room_path, class: :"reg-classroom" %>
+          </li>
+        </ul>
       </div>
     <% end %>
   </main>
