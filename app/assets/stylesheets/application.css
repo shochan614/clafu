@@ -18,9 +18,11 @@
   box-sizing: border-box;
   font-size: 30px;
 }
+
 .app-name {
   font-family: 'Hi Melody';
 }
+
 main {
   padding-top: 100px;
   background-color: whitesmoke;
@@ -42,6 +44,7 @@ main {
   z-index: 1;
   margin-top: 20px;
 }
+
 .reg-btn:after {
   width: 100%;
   height: 0;
@@ -62,6 +65,7 @@ main {
   float: right;
   margin-right: 40px;
 }
+
 .error-message {
   font-size: 20px;
   color: red;

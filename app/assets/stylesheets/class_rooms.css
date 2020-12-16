@@ -9,6 +9,7 @@
 .class-g-n {
   display: flex;
 }
+
 .grade, .class-number {
   width: 90px;
 }
@@ -16,6 +17,7 @@
 .grade {
   margin-right: 20px;
 }
+
 .class-goals {
   margin: 20px 0;
 }
@@ -26,14 +28,17 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
 .menu-list {
   margin: 30px auto;
   border: black 3px solid;
   padding: 30px;
 }
+
 .attention {
   color: red;
 }
+
 .info-class-id {
   color: red;
   font-size: 70px;
