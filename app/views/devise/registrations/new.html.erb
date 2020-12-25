@@ -4,7 +4,7 @@
     <%= render 'devise/shared/error_messages', model: f.object %>
       <div class="form-group">
         <label class="form-text">クラスID</label>
-        <%= f.number_field :class_room_id, class:"class-room-id", id:"class-room-id", placeholder:"クラスID" , min: 1 %>
+        <%= f.text_field :class_room_id, class:"class-room-id", id:"class-room-id", placeholder:"クラスID" , min: 1 %>
       </div>
       <div class="form-group">
         <label class="form-text">メールアドレス</label>
