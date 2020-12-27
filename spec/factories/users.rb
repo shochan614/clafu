@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :user do
     Faker::Config.locale = :ja
-    class_room_id { 1 }
+    class_room { FactoryBot.create(:class_room) }
     email { Faker::Internet.free_email }
     first_name { Faker::Name.first_name }
     last_name { Faker::Name.last_name }
