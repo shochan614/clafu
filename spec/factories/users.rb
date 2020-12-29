@@ -7,7 +7,7 @@ FactoryBot.define do
     last_name { Faker::Name.last_name }
     nickname { Faker::Name.last_name }
     attendance_number { Faker::Number.between(from: 1, to: 40) }
-    password = Faker::Internet.password(min_length: 6)
+    password = Faker::Internet.password(min_length: 15)
     password { password }
     password_confirmation { password }
 
