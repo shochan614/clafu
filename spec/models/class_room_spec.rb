@@ -30,12 +30,12 @@ RSpec.describe ClassRoom, type: :model do
     end
 
     it '学年が8以上では登録できないこと' do
-      @class_room.grade = 8
+      @class_room.grade = Faker::Number.between(from: 8)
       @class_room.valid?
       expect(@class_room.errors.full_messages).to include("学年は一覧にありません")
     end
     it '組が11以上では登録できないこと' do
-      @class_room.class_number = 11
+      @class_room.class_number = Faker::Number.between(from: 11)
       @class_room.valid?
       expect(@class_room.errors.full_messages).to include("組は一覧にありません")
     end
