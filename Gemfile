@@ -68,3 +68,4 @@ gem 'mini_magick'
 gem 'image_processing'
 gem 'font-awesome-rails'
 gem "aws-sdk-s3", require: false
+gem "simple_calendar", "~> 2.0"
