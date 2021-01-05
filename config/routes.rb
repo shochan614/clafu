@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :messages, only: [:index, :create, :destroy]
     resources :posts, only: [:index, :new, :create]
     resources :users, only: [:show, :edit, :update]
+    resources :calendars, only: :show
   end
 
 end
