@@ -1,4 +1,4 @@
-# 💻アプリケーション名
+# アプリケーション名
 ### 『くらふ』
 
 # アプリケーション概要
@@ -23,12 +23,15 @@
 - http://aws-clafu.com
 
 ### 🔑Basic認証
-ユーザー名：clafu
+ユーザー名：clafu  
 パスワード：1202
 
 ### 動作の様子
+#### 📨メッセージの送信・削除
+![メッセージ送信・削除](https://i.gyazo.com/d812b11964d7c9b7f4b09dc73f494e2e.gif)  
 
-![メッセージ送信・削除](https://i.gyazo.com/afcaebc2a1d3c2fe5cb2025f6580a58e.gif)  
+
+#### 🏫学級登録
 ![学級登録](https://i.gyazo.com/4a2dc4b9847f9db4f67a9e7693d19a61.gif)
 
 # 利用方法
