@@ -59,7 +59,7 @@ main {
   z-index: -1;
 }
 
-.back-btn {
+.back-btn,.edit-btn {
   text-align: center;
   border: steelblue solid 2px;
   float: right;
