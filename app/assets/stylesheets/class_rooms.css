@@ -32,6 +32,10 @@
 .menu-list {
   margin: 30px auto;
   border: black 3px solid;
+  padding: 0px;
+}
+.menu-name {
+  display: block;
   padding: 30px;
 }
 

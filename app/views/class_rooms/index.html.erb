@@ -7,23 +7,23 @@
         <div class="main-menus">
           <ul class="menu-lists">
             <li class="menu-list">
-              <%= link_to 'チャットルーム', class_room_messages_path(current_user.class_room.id) %>
+              <%= link_to 'チャットルーム', class_room_messages_path(current_user.class_room.id ), class: "menu-name" %>
             </li>
               <%#= image_tag asset_path("/images/sns_happy_woman.png", class:"chat-image") %>
             <%# <li class="menu-list"> %>
-              <%#= link_to '宿題チェック', '#' %>
+              <%#= link_to '宿題チェック', '#', class: "menu-name" %>
             <%# </li> %>
               <%#= image_tag asset_path("/images/study_school_jugyou_boy.png", class:"chat-image") %>
             <li class="menu-list">
-              <%= link_to 'カレンダー', class_room_calendar_path(current_user.class_room.id, current_user.id) %>
+              <%= link_to 'カレンダー', class_room_calendar_path(current_user.class_room.id, current_user.id), class: "menu-name" %>
             </li>
               <%#= image_tag asset_path("/images/calender_takujou.png", class:"chat-image") %>
             <li class="menu-list">
-              <%= link_to 'フォ便り', class_room_posts_path(current_user.class_room.id) %>
+              <%= link_to 'フォ便り', class_room_posts_path(current_user.class_room.id), class: "menu-name" %>
             </li>
               <%#= image_tag asset_path("/images/smartphone_photo_woman_yoko.png", class:"chat-image") %>
             <li class="menu-list">
-              <%= link_to 'マイページ', class_room_user_path(current_user.class_room.id, current_user.id) %>
+              <%= link_to 'マイページ', class_room_user_path(current_user.class_room.id, current_user.id), class: "menu-name" %>
             </li>
               <%#= image_tag asset_path("/images/smartphone_jidori_selfy_schoolgirl.png", class:"chat-image") %>
           </ul>
@@ -34,11 +34,11 @@
       <div class="main-menus">
         <ul class="menu-lists">
           <li class="menu-list">
-            <%= link_to '学校登録' , new_school_path, class: :"reg-school" %>
+            <%= link_to '学校登録' , new_school_path, class: "menu-name" %>
           </li>
               <%#= image_tag asset_path("/images/school.png", class:"chat-image") %>
           <li class="menu-list">
-            <%= link_to 'クラス登録' , new_class_room_path, class: :"reg-classroom" %>
+            <%= link_to 'クラス登録' , new_class_room_path, class: "menu-name" %>
           </li>
         </ul>
       </div>
