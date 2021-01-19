@@ -63,7 +63,7 @@
 - HTML&CSS
 - RSpec
 - devise
-- AWS(EC2,S3)
+- AWS(EC2,S3,Route53)
 
 
 # テーブル設計
