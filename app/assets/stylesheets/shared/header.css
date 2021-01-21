@@ -60,7 +60,7 @@ header {
 }
 
 .login:hover {
-  margin-top: 3px;
+  /* margin-top: 3px; */
   /* color: #fff; */
   /* background: #f56500; */
   /* border-bottom: 2px solid #b84c00; */
@@ -78,7 +78,7 @@ header {
 }
 
 .sign-up:hover {
-  margin-top: 3px;
+  /* margin-top: 3px; */
   /* color: #fff; */
   /* background: #f56500; */
   /* border-bottom: 2px solid #b84c00; */
