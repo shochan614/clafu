@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :reject  # 自分とは違うclass_roomのフォたよりには入らせない
   before_action :set_class_room_id, only: [:index, :new, :create, ]
 
   def index
@@ -20,6 +21,11 @@ class PostsController < ApplicationController
   end
 
   private
+  def reject
+    @class_room = ClassRoom.find(params[:class_room_id])
+    redirect_to root_path unless user_signed_in? && current_user.class_room.id == @class_room.id
+  end
+
   def post_params
     params.require(:post).permit(:title, :text, :image).merge(class_room_id: params[:class_room_id])
   end
