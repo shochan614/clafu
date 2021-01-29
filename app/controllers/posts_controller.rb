@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :reject  # 自分とは違うclass_roomのフォたよりには入らせない
+  before_action :authenticate_user!	
   before_action :set_class_room_id, only: [:index, :new, :create, ]
 
   def index
