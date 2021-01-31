@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :reject  # 自分とは違うclass_roomのフォたよりには入らせない
-  before_action :authenticate_user!	
-  before_action :set_class_room_id, only: [:index, :new, :create, ]
+  before_action :authenticate_user!
+  before_action :set_class_room_id, only: [:index, :new, :create]
 
   def index
     @posts = @class_room.posts.order("created_at DESC")

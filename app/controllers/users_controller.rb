@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :reject  # 自分とは違うclass_roomのチャットルームには入らせない
-  before_action :authenticate_user!	
+  before_action :authenticate_user!
   before_action :set_user_id, only: [:show, :edit]
 
   def show
