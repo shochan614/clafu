@@ -3,7 +3,7 @@ class ClassRoomsController < ApplicationController
   end
   
   def new
-    @schools = School.all #登録されているクラスが多くなった場合、allで全て呼び出す必要はあるのか。
+    @schools = School.select(:name) #登録されているクラスが多くなった場合、allで全て呼び出す必要はあるのか。
     @class_room = ClassRoom.new
   end
 
@@ -12,7 +12,7 @@ class ClassRoomsController < ApplicationController
     if @class_room.save
       render :show
     else
-      @schools = School.all #登録されているクラスが多くなった場合、allで全て呼び出す必要はあるのか。
+      @schools = School.select(:name) #登録されているクラスが多くなった場合、allで全て呼び出す必要はあるのか。
       render :new
     end
   end
