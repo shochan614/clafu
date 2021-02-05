@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   private
 
   def set_user_id
-    @user = User.find(params[:id])
+    @user = User.select(:id, :nickname, :first_name, :last_name, :email).find(params[:id])
   end
   def reject
     @class_room = ClassRoom.find(params[:class_room_id])
