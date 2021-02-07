@@ -3,7 +3,7 @@ class ClassRoomsController < ApplicationController
   end
   
   def new
-    @schools = School.select(:name, :id)
+    @schools = School.select(:name, :id).order(created_at: :desc)
     @class_room = ClassRoom.new
   end
 
@@ -12,7 +12,7 @@ class ClassRoomsController < ApplicationController
     if @class_room.save
       render :show
     else
-      @schools = School.select(:name, :id)
+      @schools = School.select(:name, :id).order(created_at: :desc)
       render :new
     end
   end
