@@ -13,5 +13,6 @@ class Admin < ApplicationRecord
     validates :nickname
     validates :first_name
     validates :last_name
+    validates :teacher
   end
 end
