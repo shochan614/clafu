@@ -1,23 +1,23 @@
 <div class="message">
-  <% if message.user.id == current_user.id %>
+  <% if message.user.id == current_user.id %> <%# 自分のメッセージ %>
     <div class="my-messages">
       <div class="my-upper-message">
         <div class="message-date">
-          <%= l message.created_at %>
-          <%= time_ago_in_words(message.created_at) %>前
+          <%= l message.created_at %> <%# 送信した時刻 %>
+          <%= time_ago_in_words(message.created_at) %>前 <%# 現在の時刻からどれくらい前に送信されたのか表示 %>
         </div>
       </div>
       <div class="lower-message">
         <div class="my-message-content">
-          <% if message.image.attached? %>
+          <% if message.image.attached? %> <%# 写真があれば、写真を表示させる %>
             <%= image_tag message.image.variant(resize: '500x500'), class: "message-image" %>
           <% end %>
           <div class="my-message-text">
-            <%= simple_format(message.content) %>
+            <%= simple_format(message.content) %> <%# メッセージの内容 %>
           </div>
         </div>
         <div>
-          <% if message.user.id == current_user.id %>
+          <% if message.user.id == current_user.id %> <%# 自分のメッセージのみに削除ボタンを表示する %>
             <div class="delete">
               <%= button_to 'さくじょ', class_room_message_path(@class_room, message), method: :delete, class: "delete" %>
             </div>
@@ -25,24 +25,24 @@
         </div>
       </div>
     </div>
-  <% else %>
+  <% else %> <%# 自分以外の人のメッセージ %>
     <div class="partners-messages">
       <div class="upper-message">
         <div class="message-user">
-          <%= message.user.last_name %>
+          <%= message.user.last_name %> <%# 誰のメッセージかわかるように名前を表示 %>
         </div>
         <div class="message-date">
-          <%= l message.created_at %>
-          <%= time_ago_in_words(message.created_at) %>前
+          <%= l message.created_at %> <%# 送信された時刻 %>
+          <%= time_ago_in_words(message.created_at) %>前 <%# 現在の時刻からどれくらい前に送信されたのか表示 %>
         </div>
       </div>
       <div class="lower-message">
         <div class="message-content">
-          <% if message.image.attached? %>
+          <% if message.image.attached? %>  <%# 写真があれば、写真を表示させる %>
             <%= image_tag message.image.variant(resize: '500x500'), class: "message-image" %>
           <% end %>
           <div class="message-text">
-            <%= simple_format(message.content) %>
+            <%= simple_format(message.content) %> <%# メッセージの内容 %>
           </div>
         </div>
       </div>
