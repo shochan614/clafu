@@ -3,7 +3,7 @@ class ClassRoomsController < ApplicationController
   end
   
   def new
-    @schools = School.select(:name, :id).order("created_at DESC")
+    @schools = School.select(:name, :id).order("created_at DESC") #学校登録が新しい順に表示させる
     @class_room = ClassRoom.new
   end
 
@@ -12,7 +12,7 @@ class ClassRoomsController < ApplicationController
     if @class_room.save
       render :show
     else
-      @schools = School.select(:name, :id).order("created_at DESC")
+      @schools = School.select(:name, :id).order("created_at DESC") #学校登録が新しい順に表示させる
       render :new
     end
   end
