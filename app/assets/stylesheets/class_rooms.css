@@ -31,8 +31,11 @@
 
 .menu-list {
   margin: 30px auto;
-  border: black 3px solid;
+  /* border: black 3px solid; */
   padding: 0px;
+  background-color: #cfdd8e;
+  font-size: 20px;
+  font-weight: bold;
 }
 .menu-name {
   display: block;
