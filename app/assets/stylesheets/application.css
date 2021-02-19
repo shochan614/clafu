@@ -61,7 +61,8 @@ main {
 
 .back-btn,.edit-btn {
   text-align: center;
-  border: steelblue solid 2px;
+  /* border: steelblue solid 2px; */
+  background-color: #cfdd8e;
   float: right;
   margin-right: 40px;
 }
