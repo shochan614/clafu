@@ -68,6 +68,10 @@ main {
   margin-top: 20px;
 }
 
+.back-btn:hover, .edit-btn:hover{
+  background-color: #dbe6b1;
+}
+
 .error-message {
   font-size: 20px;
   color: red;

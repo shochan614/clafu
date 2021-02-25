@@ -37,6 +37,10 @@
   font-size: 20px;
   font-weight: bold;
 }
+
+.menu-list:hover{
+  background-color: #dbe6b1;
+}
 .menu-name {
   display: block;
   padding: 30px;
