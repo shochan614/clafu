@@ -54,6 +54,10 @@ header {
   text-shadow: none;
 }
 
+.logout:hover{
+  background-color:rgb(240, 155, 155);
+}
+
 .login {
   /* color: #fff; */
   /* background-color: #eb6100; */
