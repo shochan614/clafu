@@ -20,20 +20,20 @@
   margin: 0 0 0 auto;
 }
 
-.my-message-content {
-  /* text-align: right; */
-}
 .upper-message {
   display: flex;
 }
+
 .my-upper-message {
   display: flex;
   justify-content: right;
 }
+
 .message-user {
   margin-right: 20px;
   font-size: 20px;
 }
+
 .message-date {
   font-size: 12px;
   padding-top: 20px;
@@ -52,17 +52,21 @@
   overflow-wrap: break-word;
   border-radius: 20px;
 }
+
 .message-image {
   border-radius: 20px;
   height: 100%;
   width: 100%;
 }
+
 .image {
   display: inline;
 }
+
 .image:hover {
   cursor: pointer;
 }
+
 .message-send {
   float: right;
   width: 100px;
