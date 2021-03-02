@@ -20,7 +20,5 @@ class UsersController < ApplicationController
   def reject
     @class_room = ClassRoom.find(params[:class_room_id])
     redirect_to root_path unless user_signed_in? && current_user.class_room.id == @class_room.id
-    # @user = User.find(params[:id])
-    # redirect_to root_path if current_user.id != @user.id
   end
 end
