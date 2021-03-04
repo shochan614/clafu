@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-<main>
+<main class = "calendar-main">
   <%= month_calendar do |date| %>
     <%= date.strftime("%d") %>
   <% end %>
