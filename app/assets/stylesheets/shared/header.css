@@ -53,13 +53,23 @@ header {
   text-align: center;
   margin-right: 10px;
   margin-top: auto;
+  background-color: #cfdd8e;
+}
 
+.login:hover {
+  background-color: #dbe6b1;
 }
 
 .sign-up {
   text-align: center;
   margin-right: 10px;
   margin-top: auto;
+  background-color: #cfdd8e;
+
+}
+
+.sign-up:hover {
+  background-color: #dbe6b1;
 }
 
 .time {
