@@ -89,7 +89,7 @@ has_many :class_rooms
 | school         | references | null: false, foreign_kye: true |
 | grate          | integer    | null: false                    |
 | class_number   | integer    | null: false                    |
-| class_goals    | storing    |                                |
+| class_goals    | string    |                                |
 
 ### Association
 
