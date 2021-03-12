@@ -5,6 +5,11 @@
     <p><%= flash[:success] %></p>
       <%if user_signed_in? %>
         <div class="main-menus">
+        <div class="week-calendar">
+          <%= week_calendar do |date| %>
+            <%= date.strftime("%d") %>
+          <% end %>
+        </div>
           <ul class="menu-lists">
             <li class="menu-list">
               <%= link_to 'チャットルーム', class_room_messages_path(current_user.class_room.id ), class: "menu-name" %>
