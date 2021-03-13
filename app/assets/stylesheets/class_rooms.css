@@ -57,3 +57,8 @@
 .chat-image {
   width: 50px;
 }
+
+.week-calendar {
+  width: 90%;
+  margin: 10px auto;
+}
