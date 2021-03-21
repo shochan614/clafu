@@ -103,3 +103,7 @@
   margin: 5px 10px;
   text-align: center;
 }
+
+.fa-image {
+  cursor: pointer;
+}
